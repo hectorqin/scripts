@@ -66,7 +66,7 @@ config = {
 }
 
 
-def runCmd(command, timeout=1800, onProgress=False):
+def runCmd(command, timeout=1800, onProgress=None):
     start = datetime.datetime.now()
     process = subprocess.Popen(
         command, shell=True, bufsize=10000, stdout=subprocess.PIPE, stderr=subprocess.PIPE, close_fds=True)
